@@ -1,3 +1,5 @@
+name: ZAP Scan
+
 on: [push]
 
 jobs:
@@ -14,6 +16,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://www.zaproxy.org'
+          target: 'demo.owasp-juice.shop'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
